@@ -1,0 +1,695 @@
+<html>
+  <head>
+</style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>"Any-to-One Voice Conversion"</title>
+
+    <style type="text/css">
+
+body, input, select, td, li, div, textarea, p {
+
+        font-size: 15px;
+
+        line-height: 20px;
+
+        font-family: verdana, arial, sans-serif;
+
+}
+
+sup {
+    vertical-align: super;
+    font-size: large;
+}
+
+body {
+        margin:15px;
+        background-color:white;
+}
+
+h1 {
+
+        font-size:20px;
+        font-weight:bold;
+}
+
+h2 {
+        font-size:18px;
+        font-weight:bold;
+}
+
+table {
+	border-collapse:collapse;
+}
+tr {
+	border:none;
+}
+th, td {
+	border-collapse:collapse;
+	border: 1px solid black;
+	padding-top:0;
+	padding-bottom:0;
+}
+.verticalSplit {
+	border-top:none;
+	border-bottom:none;
+}
+.verticalSplit:first-of-type {
+	border-left:none;
+}
+.verticalSplit:last-of-type {
+	border-right:none;
+}
+
+    </style>
+
+  </head>
+  <body>
+
+    <h1 align="center">Samples for "Any-to-One Jointly Trained Voice Conversion Model with LPCNet"</h1>
+
+    <p></p>
+
+<br>
+  Abstract: In this paper, we propose a joint training scheme of an any-to-one voice conversion (VC) system with LPCNet to improve the speech naturalness, speaker similarity, and intelligibility of the converted speech. Recent advancements in neural-based vocoder, such as LPCNet, have enabled the production of more natural and clear speech. However, other components in the typical VC systems are often designed independently, such as the conversion model. To carry the linguistic contents of the given utterance, we use speaker-independent (SI) features derived from an automatic speech recognition (ASR) model trained using mixed-language speech corpus. Subsequently, a conversion model maps the SI features to the acoustic representations used as input features to LPCNet. Hence, separate training strategies are used for each component that is not in direct correlation to the training objective of the vocoder. This problem is addressed by proposing a jointly trained conversion model and LPCNet. The possibility to synthesize cross-language speech using the proposed approach is also explored in this paper. Experimental results show that the proposed model can achieve real-time VC, while improving conversion performance.
+<br>
+<p></p>
+     submitted to ICASSP 2022 (under review)
+	 
+    <p>
+	    <br> The docker image for demonstration: <a href="https://github.com/oben-ssw10/docker_vc">Click here</a>
+
+    <p>
+    Audio samples are taken from the VCTK corpus [1] and the CSLT-ESDB corpus [2].
+    <h2></h2>
+        
+	<br>
+        <h2>Voice conversion samples:</h2>
+        <body>
+	
+	<table>
+	<tbody>
+		<tr>
+			<td>Utt. No.</td>
+			<td style="text-align:center;"><b>Source</b></td>
+			<td style="text-align:center;" ><b>Male Target</b></td>
+                        <td style="text-align:center;" ><b>System 1</b></td>
+                        <td style="text-align:center;" ><b>System 2</b></td>
+                        <td style="text-align:center;" ><b>Proposed</b></td>
+		</tr>
+		<tr>
+
+			<td rowspan="1">1.</td>
+                        <td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"Every woman deserves to live without this type of fear."</i><p></p>
+
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_source/p245_074_M.16k.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+                        </td>
+			
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/0029.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system1/p245_074_M.npy_nojopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system2/p245_074_M_melgan.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_proposed/p245_074_M.npy_jopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+		</tr>
+		<tr>
+			<td rowspan="1">2.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"The Norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky."</i> <p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/p315_016_M.16k.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+			</td>
+			
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_target/0002.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+			
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_system1/p315_016_M.npy_nojopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system2/p315_016_M_melgan.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_proposed/p315_016_M.npy_jopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+			
+		</tr>
+		<td colspan="1" class="divider"><br></td>
+		<tr >
+			<td rowspan="1">3.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"It is not a process which can be completed overnight."</i><p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/p228_274_F.16k.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>			
+			</td>
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_target/0012.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_system1/p228_274_F.npy_nojopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system2/p228_274_F_melgan.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_proposed/p228_274_F.npy_jopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+		</tr>
+		<td colspan="1" class="divider"><br></td>
+		<tr>
+			<td rowspan="1">4.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"It's too early to say whether a public inquiry would be appropriate."</i><p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/p229_183_F.16k.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+			</td>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/0016.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+                        </td>
+
+			<td>			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_system1/p229_183_F.npy_nojopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_system2/p229_183_F_melgan.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			
+			</td>
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_proposed/p229_183_F.npy_jopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+			</td>
+		</tr>
+                <td colspan="1" class="divider"><br></td>
+                <tr>
+                        <td rowspan="1">5.</td>
+                        <td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"This is a very common type of bow, one showing mainly red and yellow, with little or no green or blue."</i><p></p>
+
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_source/p232_024_M.16k.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/0020.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+                        
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system1/p232_024_M.npy_nojopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+                       
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system2/p232_024_M_melgan.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_proposed/p232_024_M.npy_jopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+		</tr>
+	</tbody>
+</table>
+
+	<br>
+        <body>
+	
+	<table>
+	<tbody>
+		<tr>
+			<td>Utt. No.</td>
+			<td style="text-align:center;"><b>Source</b></td>
+			<td style="text-align:center;" ><b>Female Target</b></td>
+                        <td style="text-align:center;" ><b>System 1</b></td>
+                        <td style="text-align:center;" ><b>System 2</b></td>
+                        <td style="text-align:center;" ><b>Proposed</b></td>
+		</tr>
+		<tr>
+
+			<td rowspan="1">1.</td>
+                        <td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"我怎么能带头破坏了这个规矩呢"</i> <p></p>
+
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_source/F_NL_22_T22_2.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+                        </td>
+			
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/156.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system1/F_NL_22_T22_2.npy_nojopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system2/F_NL_22_T22_2_melgan.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_proposed/F_NL_22_T22_2.npy_jopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+		</tr>
+		<tr>
+			<td rowspan="1">2.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"这就造成了许多摩擦缝隙和矛盾"</i> <p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/F_NL_27_T27_2.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+			</td>
+			
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_target/158.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+			
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_system1/F_NL_27_T27_2.npy_nojopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system2/F_NL_27_T27_2_melgan.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_proposed/F_NL_27_T27_2.npy_jopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+			
+		</tr>
+		<td colspan="1" class="divider"><br></td>
+		<tr >
+			<td rowspan="1">3.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"上面拨下来的有限的收购资金也成了唐僧肉"</i><p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/M_NL_10_T10_2.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>			
+			</td>
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_target/169.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_system1/M_NL_10_T10_2.npy_nojopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_system2/M_NL_10_T10_2_melgan.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_proposed/M_NL_10_T10_2.npy_jopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+		</tr>
+		<td colspan="1" class="divider"><br></td>
+		<tr>
+			<td rowspan="1">4.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"还有游泳池网球场高尔夫球场等"</i><p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/M_NL_09_T09_2.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+			</td>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/216.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+                        </td>
+
+			<td>			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_system1/M_NL_09_T09_2.npy_nojopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_system2/M_NL_09_T09_2_melgan.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			
+			</td>
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_proposed/M_NL_09_T09_2.npy_jopt.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+			</td>
+		</tr>
+	</tbody>
+</table>
+</html>
+        
+	<br>
+        <h2>Synthesizing cross-language speech:</h2>
+        <body>
+	
+	<table>
+	<tbody>
+		<tr>
+			<td>Utt. No.</td>
+			<td style="text-align:center;"><b>Source (English)</b></td>
+			<td style="text-align:center;"><b>Female Target</b></td>
+                        <td style="text-align:center;" ><b>Proposed</b></td>
+		</tr>
+		<tr>
+
+			<td rowspan="1">1.</td>
+                        <td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"Every woman deserves to live without this type of fear."</i>. <p></p>
+
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_source/p245_074_M.16k.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+                        </td>
+
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/156.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+			
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_proposed/p245_074_M.npy_jopt_cl.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+		</tr>
+		<tr>
+			<td rowspan="1">2.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"The Norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky."</i><p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/p315_016_M.16k.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+			</td>
+
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/158.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+			
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_proposed/p315_016_M.npy_jopt_cl.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+			
+		</tr>
+		<td colspan="1" class="divider"><br></td>
+		<tr >
+			<td rowspan="1">3.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"It is not a process which can be completed overnight."</i><p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/p228_274_F.16k.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>			
+			</td>
+
+
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/169.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_proposed/p228_274_F.npy_jopt_cl.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+		</tr>
+	</tbody>
+</table>
+<br>
+	<table>
+	<tbody>
+		<tr>
+			<td>Utt. No.</td>
+			<td style="text-align:center;"><b>Source (Mandarin)</b></td>
+			<td style="text-align:center;"><b>Male Target</b></td>
+                        <td style="text-align:center;" ><b>Proposed</b></td>
+		</tr>
+		<tr>
+
+			<td rowspan="1">1.</td>
+                        <td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"我怎么能带头破坏的这个规矩脑"</i> <p></p>
+
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_source/F_NL_22_T22_2.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/0029.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+                        </td>
+			
+                        <td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_proposed/F_NL_22_T22_2.npy_jopt_cl.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+		</tr>
+		<tr>
+			<td rowspan="1">2.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"这咋咋成了许多摩擦凤事业和矛盾"</i> <p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/F_NL_27_T27_2.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+
+			</td>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/0002.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+
+			
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_proposed/F_NL_27_T27_2.npy_jopt_cl.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+			
+		</tr>
+		<td colspan="1" class="divider"><br></td>
+		<tr >
+			<td rowspan="1">3.</td>
+			<td rowspan="1" style="text-align:left;vertical-align:top;padding:0"><b>Script: </b><i>"水泥行业机械损耗最大的是磨用钢球"</i><p></p>
+			
+			<audio controls style="width: 100px;">
+                        <source src="./vc_source/M_NL_14_T14_2.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>			
+			</td>
+
+			<td>
+                        <audio controls style="width: 100px;">
+                        <source src="./vc_target/0012.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+                        </td>
+
+			<td>
+			<audio controls style="width: 100px;">
+                        <source src="./vc_proposed/M_NL_14_T14_2.npy_jopt_cl.wav" type="audio/wav">
+                        Audio element not supported
+                        </audio>
+			</td>
+
+		</tr>
+	</tbody>
+</table>
+
+<h2> References: </h2>
+
+[1] J. Yamagishi, C. Veaux, and K. MacDonald, “CSTR VCTK corpus: English multi-speaker corpus for CSTR voice cloning toolkit (version 0.92),” University of Edinburgh. The Centre for Speech Technology Research (CSTR), 2019.
+
+<br>
+
+[2] F. Bie et al., “Emotional adaptive training for speaker verification,” in Proceedings of Asia-Pacific Signal and Information Processing Association Annual Summit and Conference, pp. 1–4, 2013.
